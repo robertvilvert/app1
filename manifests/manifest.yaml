@@ -1,7 +1,7 @@
 commonLabels:
   appProject: app1
   alertGroup: pope
-  version: "1"
+  version: v1
   team: pope
 
 image:

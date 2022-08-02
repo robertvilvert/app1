@@ -8,3 +8,7 @@ get '/' do
   end
 end
 
+get '/health_check' do
+  status 200
+  body 'All are good ;-)'
+end

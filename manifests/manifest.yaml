@@ -1,0 +1,26 @@
+commonLabels:
+  appProject: app1
+  alertGroup: pope
+  version: 1
+  team: pope
+
+image:
+  repository: nginx
+
+secrets:
+  useSecret: true
+  name: app1
+
+applications:
+  - name: web
+    kind: deployment
+    namespace: sre
+    labels:
+      appGroup: web
+    containerPort: 3000
+    service:
+      enabled: true
+    autoscaling:
+      enabled: false
+    args: ["ruby", "app.rb", "-p", "3000", "-o", "0.0.0.0"]
+    ingressEnabled: false

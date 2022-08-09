@@ -6,6 +6,12 @@ commonLabels:
 
 image:
   repository: nginx
+  
+vault:
+  enabled: true
+  secretName: app1
+  namespace: sre
+  domain: sre
 
 secrets:
   useSecret: true
